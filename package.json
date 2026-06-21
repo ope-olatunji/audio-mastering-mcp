@@ -1,0 +1,47 @@
+{
+  "name": "@ope-olatunji/audio-mastering-mcp",
+  "version": "1.0.0",
+  "description": "MCP server that masters audio with a full professional ffmpeg chain (corrective EQ, glue + 3-band multiband compression, saturation, harmonic exciter, stereo widening, driven limiter) and 2-pass loudnorm to an exact LUFS / true-peak target. Also analyzes loudness and mixes a vocal over a beat with sidechain ducking.",
+  "type": "module",
+  "bin": {
+    "audio-mastering-mcp": "dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ope-olatunji/audio-mastering-mcp.git"
+  },
+  "homepage": "https://github.com/ope-olatunji/audio-mastering-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/ope-olatunji/audio-mastering-mcp/issues"
+  },
+  "author": "Ope Olatunji",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audio",
+    "mastering",
+    "ffmpeg",
+    "loudness",
+    "lufs",
+    "true-peak",
+    "hip-hop"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.5.0"
+  }
+}
