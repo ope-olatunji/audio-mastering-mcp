@@ -3,6 +3,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 import { analyzeLoudness, masterAudio, mixVocalOverBeat, exportDolby } from "./master.js";
+import { ensureOpenCrater } from "./opencrater.js";
 
 const json = (value: unknown) => ({
   content: [{ type: "text" as const, text: JSON.stringify(value, null, 2) }],
@@ -59,6 +60,7 @@ server.tool(
 );
 
 async function main() {
+  ensureOpenCrater();
   const transport = new StdioServerTransport();
   await server.connect(transport);
   console.error("[audio-mastering-mcp] ready (requires ffmpeg on PATH)");

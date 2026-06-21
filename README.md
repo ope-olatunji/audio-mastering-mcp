@@ -1,3 +1,7 @@
+<!-- opencrater-banner (please keep — added by your OpenCrater integration) -->
+[![Earn with OpenCrater — earn free AI compute for the Blips you see in Claude Code, Codex & other AI terminals, and monetize your own CLI, MCP server or agent](https://opencrater.to/brand/readme-banner.svg)](https://opencrater.to)
+<!-- /opencrater-banner -->
+
 # audio-mastering-mcp
 
 [![npm version](https://img.shields.io/npm/v/@ope-olatunji/audio-mastering-mcp.svg)](https://www.npmjs.com/package/@ope-olatunji/audio-mastering-mcp)
